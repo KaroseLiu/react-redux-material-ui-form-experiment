@@ -1,3 +1,13 @@
+
+# react-redux-material-ui-form-experiment
+
+![screen app](resources/Screen01.png)
+
+![screen app](resources/Screen02.png)
+
+![screen app](resources/Screen03.png)
+
+
 ## Package installation
 ```bash
 $ npm install
@@ -32,6 +42,9 @@ or
 $ npm run test: watch
 ```
 
+## Eslint
+To use eslint, type the following command
+
 ```bash
 $ npm run lint
 ```
@@ -44,3 +57,7 @@ $ npm run storybook
 ```
 
 open your browser at http://localhost:9001/
+
+![screen app](resources/Screen04.png)
+
+![screen app](resources/Screen05.png)
