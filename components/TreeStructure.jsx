@@ -24,7 +24,6 @@ class TreeStructure extends Component {
             {(level <= 3) ? this.renderChildren(children, level) : null}
             {
               (level === 4) ? (() => {
-                console.log('the kids are', children);
                 return (
                   <ul>
                     {children.map((item) => <li key={item}>{item}</li>)}
@@ -43,7 +42,7 @@ class TreeStructure extends Component {
   render() {
     const products = _.get(this.props, 'products', {});
     return (
-      <section className="main" style={defaultStyle}>
+      <section className="secondary" style={defaultStyle}>
         {(_.size(products) > 0 ) ?
             <div>
               <h1>Tree Structure Component</h1>
