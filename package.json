@@ -4,7 +4,10 @@
   "description": "A boilerplate for React + Redux + Material UI + ES6 syntax application",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint components",
+    "test": "cross-env NODE_ENV=test mocha --recursive --compilers js:babel-register --require ./test/setup.js",
+    "test:watch": "npm test -- --watch",
+    "storybook": "start-storybook -p 9001",
     "start": "webpack-dev-server --hot --inline --progress --colors",
     "build": "webpack --progress --colors"
   },
@@ -26,6 +29,7 @@
   },
   "homepage": "",
   "devDependencies": {
+    "@kadira/storybook": "^1.19.0",
     "babel-core": "^6.7.6",
     "babel-eslint": "^6.0.3",
     "babel-loader": "^6.2.4",
@@ -42,7 +46,13 @@
     "style-loader": "^0.13.1",
     "webpack": "^1.13.0",
     "webpack-dev-server": "^1.14.1",
-    "webpack-hot-middleware": "^2.10.0"
+    "webpack-hot-middleware": "^2.10.0",
+    "mocha": "^2.4.5",
+    "jsdom": "^5.6.1",
+    "react-addons-test-utils": "^0.14.7",
+    "expect": "^1.8.0",
+    "cross-env": "^1.0.7"
+
   },
   "dependencies": {
     "classnames": "^2.2.3",
